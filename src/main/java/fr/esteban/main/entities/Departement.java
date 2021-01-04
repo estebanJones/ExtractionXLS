@@ -24,10 +24,15 @@ public class Departement {
 	@OneToMany(mappedBy = "departement")
 	private Set<Commune> communes = new HashSet<>();
 	
-	public Departement(Integer codeDepartement, Region region) {
-		this.codeDepartement = codeDepartement;
-		this.region = region;
+	public Departement() {
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public Departement(Integer codeDepartement) {
+		this.codeDepartement = codeDepartement;
+	}
+
 
 	public Integer getId() {
 		return id;

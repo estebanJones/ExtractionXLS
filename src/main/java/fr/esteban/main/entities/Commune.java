@@ -33,7 +33,6 @@ public class Commune {
 		this.populationCompteAPart = populationCompteAPart;
 		this.populationTotale = populationTotale;
 		this.codeInsee = codeInsee;
-		this.departement = departement;
 	}
 
 	public Integer getId() {

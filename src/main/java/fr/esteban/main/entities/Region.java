@@ -1,6 +1,7 @@
 package fr.esteban.main.entities;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -66,7 +67,20 @@ public class Region {
 	public void setDepartements(Set<Departement> departements) {
 		this.departements = departements;
 	}
-
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Region order = (Region) o;
+        return id == order.id;
+    }
+ 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+    
 	@Override
 	public String toString() {
 		return "Region [id=" + id + ", nom=" + nom + ", codeRegion=" + codeRegion + ", departements=" + departements

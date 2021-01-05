@@ -16,7 +16,7 @@ public class Departement {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Integer codeDepartement;
+	private String codeDepartement;
 	@ManyToOne
 	@JoinColumn(name = "region_id")
 	private Region region;
@@ -29,7 +29,7 @@ public class Departement {
 	}
 	
 	
-	public Departement(Integer codeDepartement) {
+	public Departement(String codeDepartement) {
 		this.codeDepartement = codeDepartement;
 	}
 
@@ -42,11 +42,11 @@ public class Departement {
 		this.id = id;
 	}
 
-	public Integer getCodeDepartement() {
+	public String getCodeDepartement() {
 		return codeDepartement;
 	}
 
-	public void setCodeDepartement(Integer codeDepartement) {
+	public void setCodeDepartement(String codeDepartement) {
 		this.codeDepartement = codeDepartement;
 	}
 

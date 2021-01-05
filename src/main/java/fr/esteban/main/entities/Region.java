@@ -25,6 +25,10 @@ public class Region {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Region(String nom) {
+		this.nom = nom;
+	}
+	
 	public Region(String nom, String codeRegion) {
 		this.nom = nom;
 		this.codeRegion = codeRegion;
@@ -61,6 +65,12 @@ public class Region {
 
 	public void setDepartements(Set<Departement> departements) {
 		this.departements = departements;
+	}
+
+	@Override
+	public String toString() {
+		return "Region [id=" + id + ", nom=" + nom + ", codeRegion=" + codeRegion + ", departements=" + departements
+				+ "]";
 	}
 
 	

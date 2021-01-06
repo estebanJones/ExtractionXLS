@@ -13,6 +13,7 @@ public class Commune {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String codeCommune;
+	private String nomCommune;
 	private Integer populationMunicipale;
 	private Integer populationCompteAPart;
 	private Integer populationTotale;
@@ -25,13 +26,13 @@ public class Commune {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Commune(String codeCommune, Integer populationMunicipale, Integer populationCompteAPart,
-			Integer populationTotale, String codeInsee) {
+	public Commune(String codeCommune, String nomCommune, Integer populationMunicipale, Integer populationCompteAPart, String codeInsee) {
 		super();
 		this.codeCommune = codeCommune;
+		this.nomCommune = nomCommune;
 		this.populationMunicipale = populationMunicipale;
 		this.populationCompteAPart = populationCompteAPart;
-		this.populationTotale = populationTotale;
+		this.populationTotale = this.populationCompteAPart + this.populationMunicipale;
 		this.codeInsee = codeInsee;
 	}
 
@@ -49,6 +50,15 @@ public class Commune {
 
 	public void setCodeCommune(String codeCommune) {
 		this.codeCommune = codeCommune;
+	}
+
+
+	public String getNomCommune() {
+		return nomCommune;
+	}
+
+	public void setNomCommune(String nomCommune) {
+		this.nomCommune = nomCommune;
 	}
 
 	public Integer getPopulationMunicipale() {

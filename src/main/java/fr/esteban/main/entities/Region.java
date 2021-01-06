@@ -72,8 +72,8 @@ public class Region {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Region order = (Region) o;
-        return id == order.id;
+        Region region = (Region) o;
+        return id == region.id;
     }
  
     @Override

@@ -18,7 +18,7 @@ public class MainController {
 		try {
 			this.extractManager.extract();
 		} catch (Exception e) {
-			System.out.println("FIN");
+			System.out.println("FIN " + e.getStackTrace());
 		}
 	}
 }
